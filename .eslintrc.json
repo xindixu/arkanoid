@@ -10,5 +10,9 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "semi": 0,
+    "no-underscore-dangle": 0,
+    "quotes": ["error", "double"]
+  }
 }

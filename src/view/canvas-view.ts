@@ -3,11 +3,15 @@ import { Ball } from "~/objects/ball"
 import { Brick } from "~/objects/brick"
 import { Paddle } from "~/objects/paddle"
 
-export class CanvasView {
+class CanvasView {
   canvas: HTMLCanvasElement
+
   private context: CanvasRenderingContext2D | null
+
   private infoDisplay: HTMLObjectElement | null
+
   private scoreDisplay: HTMLObjectElement | null
+
   private start: HTMLObjectElement | null
 
   constructor(canvasName: string) {
@@ -23,7 +27,7 @@ export class CanvasView {
     this.context?.clearRect(0, 0, width, height)
   }
 
-  initStartButton(startFunction: (view: CanvasView) => void): void {
+  initStartButton(startFunction: (_: CanvasView) => void): void {
     this.start?.addEventListener("click", () => startFunction(this))
   }
 
@@ -52,3 +56,5 @@ export class CanvasView {
     bricks.forEach((brick) => this.drawObject(brick))
   }
 }
+
+export default CanvasView

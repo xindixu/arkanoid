@@ -17,7 +17,7 @@ import {
 } from "~/setup"
 
 let gameOver = false
-let score = 0
+const score = 0
 
 function setGameOver(view: CanvasView) {
   view.drawInfo("Game Over!")
